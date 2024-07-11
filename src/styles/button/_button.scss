@@ -1,0 +1,117 @@
+@import "../breakpoints/breakpoint";
+
+.header-button {
+    button {
+        padding: 7px 20px;
+        background: var(--color-white);
+        border: 1.5px solid var(--color-white);
+        border-radius: 5px;
+        color: var(--color-black);
+        @include font14;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            color: var(--color-white);
+            background: transparent;
+        }
+    }
+
+    @include breakpoint("sm-max") {
+        display: none;
+    }
+}
+
+.hero-banner-div {
+    button {
+        padding: 12px 15px;
+        background: transparent;
+        border: 1.5px solid var(--color-white);
+        border-radius: 5px;
+        color: var(--color-white);
+        @include font16;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background: var(--color-white);
+            color: var(--color-black);
+        }
+    }
+}
+
+.main-button {
+    button {
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 13px 20px 13px;
+        border: 1px solid black;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        border-radius: 5px;
+        @include font16;
+        font-weight: 600;
+        color: var(--color-white);
+        
+        &::after {
+            content: "";
+            background-color: var(--font-color);
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: -5px;
+            left: -5px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        &::before {
+            content: "Shop Now";
+            width: 100%;
+            z-index: 2;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            @include flex-center;
+        }
+    
+        &:hover::after {
+            top: 0px;
+            left: 0px;
+        }
+    }
+}
+
+#white-button {
+    button {
+        border: 1px solid var(--color-white);
+        color: var(--color-black);
+
+        &::after {
+            background-color: var(--color-white);
+        }
+    }
+}
+
+.updated-button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+
+    button {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color-white);
+        @include font14;
+        font-weight: 500;
+        color: var(--color-black);
+        cursor: pointer;
+    }
+}

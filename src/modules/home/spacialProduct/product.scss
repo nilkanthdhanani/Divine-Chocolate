@@ -1,0 +1,108 @@
+@import "../../../styles/index.scss";
+
+.product {
+    margin: 100px 0;
+
+    @include breakpoint("sm-max") {
+        margin: 50px 0;
+    }
+
+    .product-head {
+        @include flex-center;
+        margin-bottom: 50px;
+
+        @include breakpoint("sm-max") {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            display: inline-block;
+            position: relative;
+            padding: 0 10px;
+            @include font40;
+            color: var(--font-color);
+
+            &::before,
+            &::after {
+                position: absolute; 
+                top: 50%;
+                width: 80px;
+                height: 4px;
+                content: "";
+                background-color: var(--font-color);
+                border-radius: 99px;
+            }
+            &::before {
+                right: 100%;
+            }
+            &::after {
+                left: 100%;
+            }
+
+            @include breakpoint("md-max") {
+                @include font32;
+            }
+
+            @include breakpoint("sm-max") {
+                @include font26;
+                text-align: center;
+                padding: 0 5px;
+                margin: 0 40px;
+
+                &::before,
+                &::after {
+                    width: 40px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+
+    .product-grid {
+        @include grid4c;
+        gap: 20px;
+
+        @include breakpoint("md-max") {
+            @include grid2c;
+        }
+
+        @include breakpoint("sm-max") {
+            @include grid1c;
+        }
+
+        .product-grid-box {
+            padding: 15px;
+
+            @include breakpoint("lg-max") {
+                padding: 0;
+            }
+
+            @include breakpoint("sm-max") {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                background-color: var(--bgcolor);
+                padding: 15px;
+                border-radius: 50%;
+                object-fit: cover;
+                aspect-ratio: 1 / 1; 
+
+                @include breakpoint("lg-max") {
+                    padding: 10px;
+                }
+            }
+
+            h3 {
+                @include font20;
+                font-weight: 700;
+                text-align: center;
+                color: var(--font-color);
+                margin-top: 15px;
+            }
+        }
+    }
+}

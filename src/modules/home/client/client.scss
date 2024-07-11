@@ -1,0 +1,141 @@
+@import "../../../styles/index.scss";
+
+.client {
+    padding: 100px 0;
+    background-color: var(--bgcolor3);
+
+    @include breakpoint("sm-max") {
+        padding: 50px 0;
+    }
+
+    .client-div {
+        .client-div-head {
+            @include flex-center;
+            margin-bottom: 50px;
+
+            h2 {
+                display: inline-block;
+                position: relative;
+                padding: 0 10px;
+                @include font40;
+                color: var(--color-white);
+
+                @include breakpoint("md-max") {
+                    @include font32;
+                }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    width: 80px;
+                    height: 4px;
+                    content: "";
+                    background-color: var(--color-white);
+                    border-radius: 99px;
+                }
+                &::before {
+                    right: 100%;
+                }
+                &::after {
+                    left: 100%;
+                }
+
+                @include breakpoint("sm-max") {
+                    @include font26;
+                    text-align: center;
+                    padding: 0 5px;
+                    margin: 0 40px;
+    
+                    &::before,
+                    &::after {
+                        width: 40px;
+                        height: 2px;
+                    }
+                }
+            }
+        }
+
+        .client-grid {
+            @include grid3c;
+            gap: 30px;
+
+            @include breakpoint("md-max") {
+                @include grid2c;
+            }
+
+            @include breakpoint("sm-max") {
+                @include grid1c;
+            }
+
+            .client-grid-box {
+                background-color: var(--color-white);
+                border-radius: 10px;
+                padding: 30px 20px;
+                position: relative;
+
+                @include breakpoint("md-max") {
+                    &:last-child {
+                        grid-column: 1 / span 2;
+                        max-width: 280px;
+                        margin: 0 auto;
+
+                        @include breakpoint("sm-max") {
+                            grid-column: 1;
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+
+                .triangel {
+                    position: absolute;
+                    top: 0;
+                    right: 30px;
+                    width: 0;
+                    height: 0;
+                    border-left: 25px solid transparent;
+                    border-right: 25px solid transparent;
+                    border-top: 25px solid var(--bgcolor3);
+                }
+
+                .quots-image {
+                    position: absolute;
+                    top: 0;
+                    right: 46px;
+
+                    img {
+                        width: 15px;
+                    }
+                }
+
+                .dg1b-text-star {
+                    @include flex;
+                    gap: 4px;
+
+                    h4 {
+                        @include font16;
+                        font-weight: 600;
+                        margin-right: 5px;
+                        font-family: var(--font-family-headland);
+                    }
+
+                    img {
+                        width: 13px;
+                    }
+                }
+
+                p {
+                    @include font16;
+                    margin: 20px 0;
+                    line-height: 1.5;
+                }
+
+                h3 {
+                    @include font18;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@import "../../styles/index.scss";
+
+footer {
+    padding: 100px 0 0 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    @include breakpoint("sm-max") {
+        padding: 50px 0 0 0;
+    }
+
+    .footer-first {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--bgcolor);
+
+        @include breakpoint("lg-max") {
+            justify-content: start;
+        }
+
+        .footer-first-logo {
+            img {
+                width: 200px;
+            }
+
+            p {
+                margin-top: 20px;
+                @include font14;
+                line-height: 1.5;
+                max-width: 300px;
+                font-weight: 200;
+            }
+        }
+
+        .footer-first-menu {
+            h2 {
+                @include font18;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            li {
+                list-style: none;
+
+                a {
+                    display: inline-block;
+                    color: var(--color-white);
+                    @include font14;
+                    font-weight: 200;
+                    margin-bottom: 10px;
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: var(--color-white);
+                        content: "";
+                        visibility: hidden;
+                        width: 0%;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &:hover {
+                        &::after {
+                            visibility: visible;
+                            width: 100%;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-last {
+        padding: 5px 0;
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        @include breakpoint("sm-max") {
+            padding: 10px 0;
+            justify-content: center;
+        }
+
+        p {
+            @include font14;
+            font-weight: 200;
+
+            @include breakpoint("lg-max") {
+                text-align: center;
+            }
+        }
+
+        .footer-cards {
+            @include flex;
+            gap: 10px;
+
+            img {
+                width: 50px;
+
+                @include breakpoint("lg-max") {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

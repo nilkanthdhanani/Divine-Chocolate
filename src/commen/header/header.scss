@@ -1,0 +1,207 @@
+@import "../../styles/index.scss";
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    z-index: 9;
+    margin: 10px;
+    
+    &.scrolled {
+        .header-div {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .header-div {
+        transition: background-color 0.3s ease;
+        border-radius: 10px;
+        padding: 17px;
+        @include flex-between;
+
+        .header-div-logo {
+            img {
+                width: 200px;
+            }
+        }
+
+        .header-div-ancer {
+            @include flex;
+            gap: 30px;
+
+            @media (max-width: 576px) {
+                display: none;
+            }
+
+            @media (max-width: 1024px) {
+                gap: 20px;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                @include font14;
+                font-weight: 500;
+                color: var(--font-color-ancor);
+                text-decoration: none;
+                transition: 0.5s ease-in-out;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    padding: 1px 0;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: var(--color-white);
+                    visibility: hidden;
+                    transition: 0.5s ease-in-out;
+                }
+
+                &:hover::after {
+                    visibility: visible;
+                    width: 100%;
+                }
+
+                &:hover {
+                    color: var(--color-white);
+                }
+            }
+
+            .active {
+                color: var(--color-white);
+
+                &::after {
+                    visibility: visible;
+                    width: 100%;
+                }
+            }
+
+            @include breakpoint("md-max") {
+                display: none;
+            }
+        }
+
+        .header-div-last {
+            @include flex;
+            gap: 30px;
+
+            .header-div-menu {
+                display: none;
+                cursor: pointer;
+
+                @include breakpoint("md-max") {
+                    display: block;
+                }
+
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--color-black);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-content {
+        padding: 10px 15px;
+        position: relative;
+
+        .sidebar-content-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            img {
+                width: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .sidebar-content-head {
+            margin-top: 10px;
+
+            img {
+                max-width: 150px;
+            }
+        }
+
+        .sidebar-content-list {
+            padding: 20px 0;
+
+            a {
+                @include flex;
+                gap: 20px;
+                padding: 15px 10px;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                @include font16;
+                font-weight: 600;
+                color: var(--color-white);
+
+                svg {
+                    width: 20px;
+                    fill: var(--color-white);
+                }
+
+                &:hover {
+                    background-color: var(--font-color);
+                    transition: 0.3s ease-in-out;
+                    color: var(--color-white);
+
+                    svg {
+                        fill: var(--color-white);
+                    }
+                }
+
+                &:last-child {
+                    display: none;
+                }
+
+                @include breakpoint("sm-max") {
+                    &:last-child {
+                        display: flex;
+                    }
+                }
+            }
+
+            .active {
+                background-color: var(--font-color);
+                color: var(--color-white);
+
+                svg {
+                    fill: var(--color-white);
+                }
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.5);
+    z-index: 9;
+}
