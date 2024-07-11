@@ -1,5 +1,5 @@
-import product1 from "./jpg/product1.webp";
-import product2 from "./jpg/product2.jpeg";
+import product1 from "./jpg/product1.jpg";
+import product2 from "./jpg/product2.jpg";
 import product3 from "./jpg/product3.jpg";
 import product4 from "./jpg/product4.jpg";
 import forget from "./jpg/forget.jpg";

@@ -46,7 +46,7 @@ export default function Collection() {
       <div className="collection">
         <div className="collection1">
           <div className="collection1-bg"></div>
-          <div className="collection1-div animate__animated animate__fadeInUpBig wow" data-wow-offset="200">
+          <div className="collection1-div animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="200">
             <div className="lovely-div-head">
               <h2>Chocolate Collection</h2>
             </div>
@@ -57,7 +57,7 @@ export default function Collection() {
             </div>
           </div>
         </div>
-        <div className="collection2 animate__animated animate__zoomIn wow" data-wow-offset="200">
+        <div className="collection2 animate__animated animate__zoomIn animate__slow wow" data-wow-offset="200">
           <div className="container">
             <Slider {...settings}>
               <div>

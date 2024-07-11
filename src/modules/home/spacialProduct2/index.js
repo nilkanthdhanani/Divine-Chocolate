@@ -7,10 +7,10 @@ export default function Product2() {
     <>
       <div className="product2">
         <div className="container">
-          <div className="product-head animate__animated animate__fadeInUpBig wow" data-wow-offset="100">
+          <div className="product-head animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="100">
             <h2>Spacial Product</h2>
           </div>
-          <div className="product-grid animate__animated animate__zoomIn wow" data-wow-offset="200">
+          <div className="product-grid animate__animated animate__zoomIn animate__slow wow" data-wow-offset="200">
             <div className="product-grid-box">
               <div className="product-grid-img">
                 <img src={product5} alt="product5" />

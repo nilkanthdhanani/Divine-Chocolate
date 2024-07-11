@@ -8,7 +8,7 @@ export default function Updated() {
         <div className="container">
           <div className="updated-div">
             <div className="updated-div-bg"></div>
-            <div className="updated-div-text animate__animated animate__fadeInUpBig wow" data-wow-offset="200">
+            <div className="updated-div-text animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="200">
               <h2>Stay Updated with Newsletter</h2>
               <p>Get the latest news, exclusive offers, and delicious updates delivered right to your inbox with our chocolate and cake shop newsletter.</p>
               <div className="updated-input">

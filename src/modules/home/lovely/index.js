@@ -7,9 +7,9 @@ export default function Lovely() {
     <>
       <div className='lovely'>
         <div className="container">
-          <div className="lovely-div animate__animated animate__fadeInUpBig wow" data-wow-offset="100">
+          <div className="lovely-div animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="100">
             <div className="lovely-div-choco">
-              <img src={lovely} alt="lovely" className=" animate__animated animate__fadeInTopRight animate_delay-3s wow" data-wow-offset="300" />
+              <img src={lovely} alt="lovely" className=" animate__animated animate__fadeInTopRight animate_delay-3s wow" animate__slow data-wow-offset="300" />
             </div>
             <div className="lovely-div-head">
               <h2>Lovely Chocolate</h2>

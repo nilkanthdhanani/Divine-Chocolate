@@ -8,10 +8,10 @@ export default function Client() {
       <div className="client">
         <div className="container">
           <div className="client-div">
-            <div className="client-div-head animate__animated animate__fadeInUpBig wow" data-wow-offset="100">
+            <div className="client-div-head animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="100">
               <h2>What Our Client Says</h2>
             </div>
-            <div className="client-grid animate__animated animate__zoomIn wow" data-wow-offset="200">
+            <div className="client-grid animate__animated animate__zoomIn animate__slow wow" data-wow-offset="200">
               <div className="client-grid-box">
                 <div className="triangel">
                 </div>

@@ -8,9 +8,9 @@ export default function Product() {
       <div className="product">
         <div className="container">
           <div className="product-head">
-            <h2 className="animate__animated animate__fadeInUpBig wow" data-wow-offset="100">Spacial Product</h2>
+            <h2 className="animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="100">Spacial Product</h2>
           </div>
-          <div className="product-grid animate__animated animate__fadeInUpBig wow" data-wow-offset="200">
+          <div className="product-grid animate__animated animate__fadeInUpBig animate__slow wow" data-wow-offset="200">
             <div className="product-grid-box">
               <img src={product1} alt="product1" />
               <h3>Cadbury Dairy Milk</h3>
