@@ -10,7 +10,7 @@ export default function Deals() {
         <div className="container">
           <div className="deals-grid">
             <div className="deals-grid1">
-              <div className="deals-grid1-box">
+              <div className="deals-grid1-box animate__animated animate__fadeInLeftBig wow" data-wow-offset="10">
                 <img src={wabChocolate} alt="wabChocolate" />
                 <div className="dg1b-text">
                   <div className="dg1b-text-star">
@@ -25,7 +25,7 @@ export default function Deals() {
                   <a href="/">Shop Now <img src={next} alt="next" /></a>
                 </div>
               </div>
-              <div className="deals-grid1-box">
+              <div className="deals-grid1-box animate__animated animate__fadeInLeftBig wow" data-wow-offset="200">
                 <img src={wabChocolate} alt="wabChocolate" />
                 <div className="dg1b-text">
                   <div className="dg1b-text-star">
@@ -40,7 +40,7 @@ export default function Deals() {
                   <a href="/">Shop Now <img src={next} alt="next" /></a>
                 </div>
               </div>
-              <div className="deals-grid1-box">
+              <div className="deals-grid1-box animate__animated animate__fadeInLeftBig wow" data-wow-offset="300">
                 <img src={wabChocolate} alt="wabChocolate" />
                 <div className="dg1b-text">
                   <div className="dg1b-text-star">

@@ -3,6 +3,7 @@
 .forget {
     background-color: var(--bgcolor2);
     padding: 100px 0;
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         padding: 50px 0;

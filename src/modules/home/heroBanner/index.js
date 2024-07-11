@@ -7,7 +7,7 @@ export default function HeroBanner() {
             <div className="hero-banner">
                 <div className="hero-banner-bg"></div>
                 <div className="container">
-                    <div className="hero-banner-div animate__animated animate__bounce">
+                    <div className="hero-banner-div animate__animated animate__fadeInLeftBig">
                         <h1>Make More Moments <br />of Gododness </h1>
                         <p>Indulge in a heaven of chocolates and cals to setisfy your <br />carving. Dive into this heaven by choosing the best UI kit </p>
                         <button>Shop Now</button>
