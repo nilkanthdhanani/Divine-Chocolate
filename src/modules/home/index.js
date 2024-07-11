@@ -8,6 +8,7 @@ import Deals from './deals'
 import Product2 from './spacialProduct2'
 import Client from './client'
 import Updated from './updated'
+import 'animate.css';
 
 export default function Home() {
   return (
